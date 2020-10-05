@@ -1,12 +1,20 @@
 <!DOCTYPE html>
-<html style="height: 100%;">
+<html>
 
 <head>
 	<title>Nid Gloge</title>
 
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
 	<script>
 		function setMsg() {
-			var msg = window.location.search.substring(1)
+			var msg = window.location.search.substring(1);
+			msg = msg.replace(/%C3%A4/g, "\u00e4"); // ä
+			msg = msg.replace(/%C3%B6/g, "\u00f6"); // ö
+			msg = msg.replace(/%C3%BC/g, "\u00fc"); // ü
+			msg = msg.replace(/%C3%84/g, "\u00c4"); // Ä
+			msg = msg.replace(/%C3%96/g, "\u00d6"); // Ö
+			msg = msg.replace(/%C3%9C/g, "\u00dc"); // Ü
 
 			if (msg.length > 0)
 				document.getElementById("msg").innerHTML = msg.replace(/-/g, " ");
@@ -14,8 +22,11 @@
 	</script>
 </head>
 
-<body style="background-color: black; display: flex; justify-content: center; align-items: center; height: 100%;" onload="setMsg()">
-	<h1 id="msg" style="color: white; width: 75%; text-align: center;">dasch nid mau gloge</h1>
+<body style="background-color: black;" onload="setMsg()">
+	<div style="height: 200px; width: 500px; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+		<h1 id="msg" style="color: white; text-align: center;">dasch nid mau gloge</h1>
+		<p id="msg" style="color: white; text-align: right;">--- nidgloge.ch</p>
+	</div>
 </body>
 
 </html>

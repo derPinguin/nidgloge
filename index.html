@@ -25,6 +25,8 @@
 
 			if (msg.length > 0)
 				document.getElementById("msg").innerHTML = msg;
+			else if (msg.length == 0)
+				document.getElementById("quote").innerHTML = "";
 		}
 	</script>
 </head>
@@ -32,7 +34,7 @@
 <body style="background-color: black;" onload="setMsg()">
 	<div style="height: 200px; width: 500px; margin: 0; position: absolute; top: 50%; left: 50%; -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
 		<h1 id="msg" style="color: white; text-align: center;">dasch nid mau gloge</h1>
-		<p id="msg" style="color: white; text-align: right;">--- nidgloge.ch</p>
+		<p id="quote" style="color: white; text-align: right;">&mdash; nidgloge.ch</p>
 	</div>
 </body>
 

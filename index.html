@@ -16,6 +16,9 @@
 			msg = msg.replace(/%C3%96/g, "\u00d6"); // Ö
 			msg = msg.replace(/%C3%9C/g, "\u00dc"); // Ü
 
+			msg = msg.replace(/%27/g, "'"); // '
+			msg = msg.replace(/%22/g, "\""); // '
+
 			if (msg.length > 0)
 				document.getElementById("msg").innerHTML = msg.replace(/-/g, " ");
 		}

@@ -18,6 +18,7 @@
 
 			msg = msg.replace(/%27/g, "'"); // '
 			msg = msg.replace(/%22/g, "\""); // '
+			msg = msg.replace(/%20/g, " "); // '
 
 			if (msg.length > 0)
 				document.getElementById("msg").innerHTML = msg.replace(/-/g, " ");
